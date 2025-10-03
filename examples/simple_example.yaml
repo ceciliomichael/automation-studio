@@ -1,0 +1,38 @@
+name: Simple Example Script
+description: A basic example showing different automation actions
+author: Automation Studio
+version: 1.0
+
+steps:
+  - action: click
+    x: 500
+    y: 300
+    description: Click at specific coordinates
+
+  - action: delay
+    milliseconds: 1000
+    description: Wait 1 second
+
+  - action: type
+    text: Hello, World!
+    description: Type some text
+
+  - action: hotkey
+    keys: [ctrl, a]
+    description: Select all text
+
+  - action: hotkey
+    keys: [ctrl, c]
+    description: Copy text
+
+  - action: delay
+    milliseconds: 500
+
+  - action: click
+    x: 600
+    y: 400
+    description: Click another location
+
+  - action: paste
+    description: Paste copied text
+

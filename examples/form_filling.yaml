@@ -1,0 +1,74 @@
+name: Form Filling Example
+description: Example of filling out a web form automatically
+author: Automation Studio
+version: 1.0
+
+steps:
+  # Click on name field
+  - action: click
+    x: 800
+    y: 300
+    description: Click name field
+
+  - action: delay
+    milliseconds: 500
+
+  # Type name
+  - action: type
+    text: John Doe
+    description: Enter name
+
+  # Tab to next field
+  - action: press
+    key: tab
+    presses: 1
+    description: Move to email field
+
+  - action: delay
+    milliseconds: 300
+
+  # Type email
+  - action: type
+    text: john.doe@example.com
+    description: Enter email
+
+  # Tab to phone field
+  - action: press
+    key: tab
+    presses: 1
+
+  - action: delay
+    milliseconds: 300
+
+  # Type phone
+  - action: type
+    text: "555-1234"
+    description: Enter phone number
+
+  # Tab to address field
+  - action: press
+    key: tab
+    presses: 1
+
+  - action: delay
+    milliseconds: 300
+
+  # Type address
+  - action: type
+    text: 123 Main Street, City, State 12345
+    description: Enter address
+
+  # Submit form
+  - action: delay
+    milliseconds: 1000
+
+  - action: click
+    x: 850
+    y: 600
+    description: Click submit button
+
+  # Wait for confirmation
+  - action: delay
+    milliseconds: 3000
+    description: Wait for form to process
+

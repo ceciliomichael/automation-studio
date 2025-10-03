@@ -1,0 +1,73 @@
+name: Data Entry Automation
+description: Automates repetitive data entry tasks with copy-paste
+author: Automation Studio
+version: 1.0
+
+steps:
+  # Navigate to data source
+  - action: click
+    x: 400
+    y: 200
+    description: Click on data source window
+
+  - action: delay
+    milliseconds: 500
+
+  # Select first data item
+  - action: double_click
+    x: 450
+    y: 250
+    description: Double-click to select data
+
+  - action: delay
+    milliseconds: 300
+
+  # Copy data
+  - action: hotkey
+    keys: [ctrl, c]
+    description: Copy selected data
+
+  - action: delay
+    milliseconds: 500
+
+  # Switch to target application
+  - action: click
+    x: 900
+    y: 200
+    description: Click target application window
+
+  - action: delay
+    milliseconds: 500
+
+  # Paste data
+  - action: paste
+    description: Paste data into field
+
+  - action: delay
+    milliseconds: 500
+
+  # Move to next field
+  - action: press
+    key: tab
+    presses: 1
+
+  # Set clipboard with predefined value
+  - action: set_clipboard
+    text: Category A
+    description: Set category value
+
+  - action: paste
+    description: Paste category
+
+  # Save entry
+  - action: delay
+    milliseconds: 500
+
+  - action: hotkey
+    keys: [ctrl, s]
+    description: Save entry
+
+  - action: delay
+    milliseconds: 2000
+    description: Wait for save to complete
+
